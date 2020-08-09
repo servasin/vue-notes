@@ -1,18 +1,36 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="Home">
+    <h1>Заметки</h1>
+    <NotesList />
+    <router-link to="/add">
+      <button class="new-btn btn">
+        <i class="fas fa-plus"></i>
+      </button>
+    </router-link>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import NotesList from "@/components/NotesList";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld
+    NotesList
   }
 };
 </script>
+
+<style>
+.new-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  background-color: royalblue;
+  color: #fff;
+}
+</style>
